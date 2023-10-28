@@ -21,6 +21,7 @@ app.get("/", function(req,res) {
     res.sendFile(__dirname + "/transportio/index.html");
 })
 
+app.use(express.static("transportio"));
 
 app.post("/", function(req,res){
     let newdetail = new detail({
